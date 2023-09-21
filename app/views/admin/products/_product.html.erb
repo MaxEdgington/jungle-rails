@@ -1,3 +1,5 @@
+<% Rails.logger.debug "Debug: Rendering _product.html.erb for #{product.name}" %>
+
 <tr>
   <td>
     <%= image_tag product.image.tiny.url %>
@@ -13,9 +15,11 @@
   <td>
     <%=humanized_money_with_symbol product.price %>
   </td>
+
   <td>
     <%= product.quantity %>
   </td>
+ 
   <td>
     <%= link_to fa_icon('trash'), [:admin, product], class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: "Are you sure?" } %>
   </td>
