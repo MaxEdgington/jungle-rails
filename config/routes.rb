@@ -93,7 +93,7 @@ Rails.application.routes.draw do
 
       get '/login' => 'sessions#new'
    post '/login' => 'sessions#create'
-   get '/logout' => 'sessions#destroy'
+   get '/logout' => 'sessions#destroy', as: :logout
 
 
     # These routes will be for signup. The first renders a form in the browse, the second will 
